@@ -30,12 +30,12 @@ prompt = PromptTemplate(
 OPENAI_api_key = os.getenv('OPENAI_API_KEY')
 
 
-def load_openAI():
+def load_openAI(OPENAI_api_key):
      model = OpenAI(temperature=0, openai_api_key=OPENAI_api_key)
      return model
 
 
-llm = load_openAI()
+llm = load_openAI(OPENAI_api_key)
 
 if 'text_summary' not in st.session_state:
     st.session_state.text_summary = None
