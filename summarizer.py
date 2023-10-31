@@ -93,9 +93,13 @@ if (max_exceed == 0):
     st.write(text_summary)
 
     place_file = BytesIO()
-    text_speech = gTTS(text_summary, lang='en')
-    text_speech.write_to_fp(place_file)
-    st.audio(place_file)
+    
+    if text_summary:
+        text_speech = gTTS(text_summary, lang='en')
+        text_speech.write_to_fp(place_file)
+        st.audio(place_file)
+    else:
+        st.write('Text to speech not available')
 
     summary_language = st.selectbox('Select language for summary translation:',google_languages)
 
