@@ -1,3 +1,3 @@
-from utils.helpers import Helper
+from utils.helper import Helper
 
 Helper.printMessage()
