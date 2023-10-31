@@ -5,6 +5,7 @@ import gtts.lang
 from io import BytesIO
 from langchain.prompts import PromptTemplate
 from langchain.llms import OpenAI
+import openai
 from deep_translator import GoogleTranslator
 
 template = """
