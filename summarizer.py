@@ -27,7 +27,7 @@ prompt = PromptTemplate(
     template = template,
 )
 
-OPENAI_api_key = os.getenv('OPENAI_API_KEY')
+#OPENAI_api_key = os.getenv('OPENAI_API_KEY')
 if (st.secrets["temp_key"]):
     st.write(os.getenv('OPENAI_API_KEY') == st.secrets["temp_key"])
     OPENAI_api_key = os.getenv('OPENAI_API_KEY')
