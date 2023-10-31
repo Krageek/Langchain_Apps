@@ -27,7 +27,9 @@ prompt = PromptTemplate(
     template = template,
 )
 
-OPENAI_api_key = os.getenv('OPENAI_API_KEY')
+#OPENAI_api_key = os.getenv('OPENAI_API_KEY')
+OPENAI_api_key = os.environ.get("OPENAI_API_KEY")
+
 
 def load_openAI():
      model = OpenAI(temperature=0, openai_api_key=OPENAI_api_key)
