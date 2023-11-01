@@ -9,18 +9,21 @@ import openai
 from deep_translator import GoogleTranslator
 
 template = """
-    You are a literature expert.
-    You are given some text in its entirety.
+    You are a literature expert. You are given some text in its entirety.
     
-    You need to summarize the text in a way that anyone with absolutely no idea about the subject or context of the text, can understand the summary you make.
+    You need to summarize the text in a way that anyone with absolutely no idea about the subject or context of the text, can understand the summary you create.
    
     You also need to show some keywords after the summary from the text, that highlight its key concepts or topics.
 
     Text: {text}
 
-    Remember that your summary has to be in bullet points:
+    Remember that your summary has to be in bullet points with keywords after that and should be formatted similar to this example:
+    * This is the first sentence of the summary
+    * This is the second sentence of the summary
+    
+    Keywords:
 
-    Your summary in bullet points:
+    Based on this, Your summary in bullet points:
 """
 
 prompt = PromptTemplate(
@@ -44,9 +47,9 @@ if 'text_summary' not in st.session_state:
 st.set_page_config(page_title="Text Summarizer")
 st.header("Summarizer Web App")
 
-st.write('You often come across an article or a document with a lot of text. It could either be too complicated to read or you simply don\'t have the time to go through all of it. This app could help you with that by summarizing text into easily understandable points. You are also able to translate the summary into a language of your choosing, if you would like to do that. In the event that you prefer that the summary be read out to you, some of the languages have the added functionality of text-to-speech as well')
-st.write("The app was created using [LangChain's](www.langchain.com) and [OpenAI's](https://openai.com/blog/openai-api) API for summarization of the text, while [deep-translator](https://github.com/nidhaloff/deep-translator) was used for the translations and [gTTS (Google Text-to-Speech)](https://github.com/pndurette/gTTS) for the text-to-speech functionality.")
-st.write('[Streamlit](https://streamlit.io/) was used to build this Web App')
+st.write('You often come across an article or a document with a lot of text. It could either be too complicated to read or you simply don\'t have the time to go through all of it. This app could help you with that by summarizing text into easily understandable points. You are also able to translate the summary into a language of your choosing, if you would like to do that. In the event that you prefer that the summary be read out to you, some of the languages have the added functionality of text-to-speech as well.')
+st.write("The app was created using [LangChain's](https://www.langchain.com/) and [OpenAI's](https://openai.com/blog/openai-api) API for summarization of the text, while [deep-translator](https://github.com/nidhaloff/deep-translator) was used for the translations and [gTTS (Google Text-to-Speech)](https://github.com/pndurette/gTTS) for the text-to-speech functionality.")
+st.write('[Streamlit](https://streamlit.io/) was used to build this Web App.')
 
 st.markdown("## Text Information")
 
