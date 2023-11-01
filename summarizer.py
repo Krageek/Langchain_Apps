@@ -17,7 +17,7 @@ template = """
 
     Text: {text}
 
-    Remember that your summary has to be in bullet points with keywords after that. It is absolutely essential that every bullet point of your summaryappears in a new line. 
+    Remember that your summary has to be in bullet points with keywords after that. It is absolutely essential that every bullet point of your summary appears in a new line. 
     
     It should be formatted like the example below:
     "
