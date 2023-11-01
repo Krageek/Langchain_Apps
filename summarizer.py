@@ -19,6 +19,7 @@ template = """
 
     Remember that your summary has to be in bullet points with keywords after that and should be formatted similar to this example:
     • This is the first sentence of the summary
+    
     • This is the second sentence of the summary
     
     Keywords:
