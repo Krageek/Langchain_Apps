@@ -20,12 +20,11 @@ template = """
     Remember that your summary has to be in bullet points with keywords after that. It is absolutely essential that every bullet point of your summaryappears in a new line. 
     
     It should be formatted like the example below:
+    "
     • This is the first sentence of the summary and is part of the first line only.
-
     • This is the second sentence of the summary and is part of the second line only.
-    
     Keywords:
-
+    "
     Based on this, Your summary in bullet points:
 """
 
