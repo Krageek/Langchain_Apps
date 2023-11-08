@@ -56,7 +56,7 @@ if document:
 
         chain = load_qa_chain(llm, chain_type="stuff")
         answer = chain.run(input_documents=text_compared, question = show_question)
-
+        st.markdown("## Answer")
         st.write(answer)
 
 
