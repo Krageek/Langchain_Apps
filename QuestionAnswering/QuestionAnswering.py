@@ -49,7 +49,7 @@ if document:
         text_compared = embeddings_store.similarity_search(show_question)
 
         def load_openAI():
-            model = OpenAI(temperature=0, openai_api_key=os.getenv("OPENAI_API_KEY"))
+            model = OpenAI(model_name = "gpt-3.5-turbo",temperature=0, openai_api_key=os.getenv("OPENAI_API_KEY"))
             return model
         
         llm = load_openAI()
