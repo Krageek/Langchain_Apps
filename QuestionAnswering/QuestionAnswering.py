@@ -44,7 +44,7 @@ if document:
     embeddings = OpenAIEmbeddings()
     embeddings_store = FAISS.from_texts(text_chunks, embeddings)
 
-    show_question = st.text_input("What would you like to know about your documents")
+    show_question = st.text_input("What would you like to know about your documents?")
     if show_question:
         text_compared = embeddings_store.similarity_search(show_question)
 
